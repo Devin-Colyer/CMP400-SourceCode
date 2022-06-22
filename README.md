@@ -1,1 +1,2 @@
 # CMP400-SourceCode
+This is the source code for my 4th-year honours project at Abertay University testing accessibility in relation to difficulty in soulslike and metroidvania titles. The full application and dissertation can be found here: https://papadev.itch.io/soulslike-accessibility-test.
