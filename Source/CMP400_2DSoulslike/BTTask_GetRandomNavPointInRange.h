@@ -1,0 +1,28 @@
+// Fill out your copyright notice in the Description page of Project Settings.
+
+#pragma once
+
+#include "BehaviorTree/BTTaskNode.h"
+#include "BTTask_GetRandomNavPointInRange.generated.h"
+
+UCLASS()
+class CMP400_2DSOULSLIKE_API UBTTask_GetRandomNavPointInRange : public UBTTaskNode
+{
+	GENERATED_BODY()
+
+protected:
+	UPROPERTY(EditAnywhere)
+		FBlackboardKeySelector SelfKey;
+	UPROPERTY(EditAnywhere)
+		FBlackboardKeySelector ResultKey;
+	UPROPERTY(EditAnywhere)
+		float Radius;
+
+public:
+	UBTTask_GetRandomNavPointInRange();
+
+	virtual void InitializeFromAsset(UBehaviorTree& Asset) override;
+	virtual EBTNodeResult::Type ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory) override;
+
+	
+};
